@@ -7,12 +7,19 @@ import java.util.List;
 
 public class FamilyTree {
     List<Human> humanList;
+    int id;
 
     public FamilyTree() {
         humanList = new ArrayList<>();
     }
     public void add(Human human){
         humanList.add(human);
+        id++;
+        human.setId(id);
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override
